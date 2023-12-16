@@ -43,7 +43,7 @@
         <repository>
             <id>github</id>
             <name>GitHub rmaheto Apache Maven Packages</name>
-            <url>https://maven.pkg.github.com/rmaheto/api-client</url>
+            <url>https://maven.pkg.github.com/rmaheto/api-client-library</url>
         </repository>
     </distributionManagement>
 
