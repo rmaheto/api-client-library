@@ -21,7 +21,7 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
-        settings-path: .github/maven/settings.xml
+        settings-path: .github/maven
 
 
     - name: Build with Maven
