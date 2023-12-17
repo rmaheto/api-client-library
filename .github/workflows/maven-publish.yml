@@ -26,11 +26,6 @@ jobs:
       run: |
         mvn -B package --file pom.xml
 
-    - name: Copy Artifacts
-      run: |
-        mkdir artifacts
-        cp target/*.jar artifacts/
-
     - name: Publish to GitHub Packages
       run: mvn deploy
       env:
