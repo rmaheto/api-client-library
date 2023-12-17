@@ -35,4 +35,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: api-client-library
-        path: artifacts
+        path: target/codemaniac-restclient-library-0.0.1-SNAPSHOT.jar
