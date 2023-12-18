@@ -4,7 +4,7 @@
 
     <groupId>com.codemaniac</groupId>
     <artifactId>api-client-library</artifactId>
-    <version>1.0.2</version>
+    <version>1.0.3-SNAPSHOT</version>
     <name>api-client-lib</name>
     <description>codemaniac-api-client-lib</description>
     <packaging>jar</packaging>
@@ -52,7 +52,7 @@
         <developerConnection>scm:git:https://github.com/rmaheto/api-client-library.git
         </developerConnection>
         <url>https://github.com/rmaheto/api-client-library</url>
-        <tag>create</tag>
+        <tag>api-client-library</tag>
     </scm>
     <distributionManagement>
         <repository>
