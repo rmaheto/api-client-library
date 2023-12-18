@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.codemaniac</groupId>
-    <artifactId>codemaniac-restclient-library</artifactId>
+    <artifactId>api-client-library</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>api-client-lib</name>
     <description>codemaniac-api-client-lib</description>
@@ -41,7 +41,7 @@
 
     <distributionManagement>
         <repository>
-            <id>api-client</id>
+            <id>github</id>
             <name>GitHub Raymond Aheto Apache Maven Packages</name>
             <url>https://maven.pkg.github.com/rmaheto/api-client-library</url>
         </repository>
