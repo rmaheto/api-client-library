@@ -21,7 +21,6 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
-        settings-path: .github/maven
 
 
     - name: Build with Maven
@@ -29,7 +28,7 @@ jobs:
         mvn -B package --file pom.xml
 
     - name: Publish to GitHub Packages
-      run: mvn deploy
+      run: mvn --batch-mode deploy
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
