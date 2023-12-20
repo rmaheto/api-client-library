@@ -83,17 +83,13 @@ public class LoggingService {
 
     public void buildResLogger(HttpRequest request, ClientHttpResponse response, long duration) throws IOException {
 
-        String logInfo = "RESPONSE " +
-                "method=[" + request.getMethod() + "] " +
-                "path=[" + request.getURI().toString() + "] " +
-                "responseHeaders=[" + response.getHeaders() + "] " +
-                "responseBody=[" + getResponseBody(response) + "] " +
-                "Request Duration=[" + duration + "]";
+        String responseBody = this.getResponseBody(response); // Read once and store
 
+        String logInfo = "RESPONSE method=[" + request.getMethod() + "] path=[" + request.getURI().toString() + "] responseHeaders=[" + response.getHeaders() + "] responseBody=[" + responseBody + "] Request Duration=[" + duration + "]";
         log.info(logInfo);
-        if (getResponseBody(response).isEmpty()) {
+
+        if (responseBody.isEmpty()) {
             log.warn("Blank response detected");
-            // Log as a security event
         }
     }
 
