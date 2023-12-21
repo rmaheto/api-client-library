@@ -4,7 +4,7 @@
 
     <groupId>com.codemaniac</groupId>
     <artifactId>api-client-library</artifactId>
-    <version>1.0.3-SNAPSHOT</version>
+    <version>1.0.5-SNAPSHOT</version>
     <name>api-client-lib</name>
     <description>codemaniac-api-client-lib</description>
     <packaging>jar</packaging>

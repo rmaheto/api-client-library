@@ -22,9 +22,11 @@ public class LoggingRequestInterceptor implements ClientHttpRequestInterceptor {
     public ClientHttpResponse intercept(HttpRequest request, byte[] body, ClientHttpRequestExecution execution) throws IOException {
         loggingService.buildReqLogger(request, Arrays.toString(body));
         long startTime = System.currentTimeMillis();
-        ClientHttpResponse response = execution.execute(request, body);
+        ClientHttpResponse originalResponse = execution.execute(request, body);
+
+        BufferingClientHttpResponseWrapper responseWrapper = new BufferingClientHttpResponseWrapper(originalResponse);
         long endTime = System.currentTimeMillis();
-        loggingService.buildResLogger(request, response, endTime - startTime);
-        return response;
+        loggingService.buildResLogger(request, responseWrapper, endTime - startTime);
+        return responseWrapper;
     }
 }
